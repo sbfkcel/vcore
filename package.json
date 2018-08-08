@@ -1,0 +1,26 @@
+{
+  "name": "dcore",
+  "version": "0.5.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbfkcel/dcore.git"
+  },
+  "keywords": [
+    "cookie",
+    "url",
+    "element",
+    "jsonp",
+    "bindEvent"
+  ],
+  "author": "sbfkcel@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbfkcel/dcore/issues"
+  },
+  "homepage": "https://github.com/sbfkcel/dcore#readme"
+}
