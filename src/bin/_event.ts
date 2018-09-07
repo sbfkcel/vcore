@@ -39,7 +39,9 @@ event = {
                     let item:Function = obj[eventKey][type][i];
 
                     // 让IE的event.target不为空
-                    arg[0].target = arg[0].target || arg[0].srcElement;
+                    if(arg && arg[0] && !arg[0].target){
+                        arg[0].target = arg[0].srcElement;
+                    };
                     
                     item.call(obj,...arg);
                 };
