@@ -37,6 +37,10 @@ event = {
                 // arg[0] = arg[0] || window.event;
                 for(let i=0,len=obj[eventKey][type].length; i<len; i++){
                     let item:Function = obj[eventKey][type][i];
+
+                    // 让IE的event.target不为空
+                    arg[0].target = arg[0].target || arg[0].srcElement;
+                    
                     item.call(obj,...arg);
                 };
             };
