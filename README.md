@@ -3,15 +3,19 @@
 `vcore` 是一个用于处理url，元素选择器，dom事件绑定，jsonp数据请求的基础库。
 
 
-## API
+## USE
+
+```bash
+npm install vcore
+```
 
 ```javascript
 const vcore = require('vcore'),
-    $cookie = dcore.cookie,
-    $url = dcore.url,
-    $element = dcore.element,
-    $event = dcore.event,
-    $jsonp = dcore.jsonp;
+    $cookie = vcore.cookie,
+    $url = vcore.url,
+    $element = vcore.element,
+    $event = vcore.event,
+    $jsonp = vcore.jsonp;
 
 ```
 
