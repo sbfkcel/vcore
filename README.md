@@ -137,7 +137,7 @@ $element.create(html);
  * @param  {HTMLElement} parent [选填] 父元素以提升低版本下元素获取速度，默认为document
  * @returns Array 返回一个数组元素
  */
-$element.create(html,parent);
+$element.get(html,parent);
 ```
 
 ### Event
