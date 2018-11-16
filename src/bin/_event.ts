@@ -35,16 +35,18 @@ event = {
 
             let run:Function = function(...arg){
                 // arg[0] = arg[0] || window.event;
-                for(let i=0,len=obj[eventKey][type].length; i<len; i++){
-                    let item:Function = obj[eventKey][type][i];
-
-                    // 让IE的event.target不为空
-                    if(arg && arg[0] && !arg[0].target){
-                        arg[0].target = arg[0].srcElement;
+                if(obj && obj[eventKey] && obj[eventKey][type] && obj[eventKey][type].length){
+                    for(let i=0,len=obj[eventKey][type].length; i<len; i++){
+                        let item:Function = obj[eventKey][type][i];
+    
+                        // 让IE的event.target不为空
+                        if(arg && arg[0] && !arg[0].target){
+                            arg[0].target = arg[0].srcElement;
+                        };
+                        
+                        item.call(obj,...arg);
                     };
-                    
-                    item.call(obj,...arg);
-                };
+                }; 
             };
 
             if(typeof obj['addEventListener'] === 'function'){
